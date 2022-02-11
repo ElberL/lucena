@@ -8,88 +8,76 @@
 #include <ctype.h>
 #include <time.h>
 
-int main()
+char MOD( char a)
+{int d,i;
+char b[25];
+char nome[25];
+char escrita[500];
+double c;
+
+	fflush(stdin);
+	scanf("%[^\n] %lf", &b, &c);
+ 	d = strlen(b);
+ 	
+		
+	
+	if (d>25) {
+	
+	for(i = 0; i<25 ;i++){
+	
+	nome[i] = b[i];
+	}
+	}else {
+		for(i = 0; i<d ;i++){
+	
+	nome[i] = b[i];
+		
+	}
+	while( d < 25){
+		nome[d] = '1';
+		d++;
+		}
+	
+	}
+	printf("%i %s %.2lf", a, nome, c);
+	
+	for (i = 0; i < 500; i++)
+		
+			if ( i = 0)
+			{
+			escrita[0] = a;
+			}if ( i = 1)
+			{
+			escrita[1] = ' ';	
+			}
+			while ( nome[i] != '\n'){
+			
+			escrita[i]= nome[i];
+			i++;
+			}i++;
+			escrita[i] = ' ';	
+			i++;
+			escrita[i] = c;
+    	
+			return escrita[i];
+    
+} 
+
+int man()
 {
-	char str[250];
+	int a ;
+	char n1[500];
+	char resultado [500];
+	int i;
 	
-	char letra[50];
-	char impressao[5];
+	fflush(stdin);
+    scanf("%i\n" , &a);
 	
-	int i =0 ,  c = 0, espaco =0, a = 0, nome = 0, t = 0, z = 0, k= 0, im= 0, teste = 0; 
+	if (a > 0){
 	
-	setbuf(stdin, NULL);
+	resultado[i] = MOD(n1[i]);
 	
-		fgets(str);
-	
-	a = strlen(str);//tamanho da streeng
-	char str2[a];
-	
-		for(i = 0; i<a ;i++){
-			
-		 // percorre pela primeira vez
-			if(str[i] == ' '){		// procura os espacos
-				espaco = espaco + 1;
-				}
-
-		} 
-		i =0;
-		for(i = 0; i<a ;i++){ // percorre pela segunda vez preenchendorimeira vez
-			
-			if(str[i] == ' ')
-			{ teste = teste + 1;
-				if( teste < espaco){		// procura os espacos
-				i++;
-				letra[z] = ' ';
-				z++;
-				letra[z] = str[i];
-				z++;
-				letra[z] = '.';
-				z++;
-				 }
-			}
-			}
-	 	i = 0 ;		// zerar para percorrer novamente
-		for(i = 0; i<a ;i++){ //percorre pela terceira vez 
-			if(str[i] == ' ') {
-				nome = nome + 1;
-					if ( nome == espaco){
-						for(; i<a ;i++){ //percorre pela terceira vez 
-							if(str[i] == ' ')
-							{i++;
-							}
-								str2[t] = str[i];
-
-								t++;
-									if(str[i] == '\n'){ 
-								
-									nome = nome +1;	}
-							}	
-						}
-			}	
-		}
-			i = 0 ;
-			for(i = 0; i<1 ;i++){
-				
-				impressao[im] = ',';
-				im++;
-				impressao[im] = ' ';
-				im++;
-				impressao[im] = str[0];
-				im++;
-				impressao[im] = '.';
-		}
-	
-
-			
-			
-			toupper(str2);
-	strcat (str2,impressao);
-	strcat (str2,letra);
-	
-	printf("%s", str2);
-				
-return 0;
-
+	printf ( "%s", resultado);
 }
-	
-	
+return 0;
+}
